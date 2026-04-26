@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-page-bg: #fdfdfd;
+  --color-dark-text: #1a1a1a;
+  --color-health-green: #A8E6CF;
+  --color-trust-blue: #A0C4FF;
+  --color-energy-orange: #FFD6A5;
+  --color-severe-red: #FF6B6B;
+  
+  --shadow-geometric: 0 4px 20px rgba(0,0,0,0.03);
+  --shadow-3xl: 0 40px 100px -20px rgba(0,0,0,0.1);
+  --radius-geometric: 24px;
+
+  --animate-bounce-subtle: bounce-subtle 3s ease-in-out infinite;
+  
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer utilities {
+  .shadow-inner-white {
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.8);
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans text-dark-text bg-page-bg;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.geometric-sidebar {
+  background: linear-gradient(180deg, #A8E6CF 0%, #A0C4FF 100%);
+}
+
+.geometric-btn {
+  background: linear-gradient(90deg, #A8E6CF, #A0C4FF);
+}
+
+.geometric-card {
+  @apply bg-white rounded-geometric shadow-geometric border border-black/2 opacity-100;
+}
+
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-white/40;
+}

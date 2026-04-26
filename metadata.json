@@ -1,0 +1,6 @@
+{
+  "name": "Anganwadi Nutrition Tracker",
+  "description": "A comprehensive child nutrition tracking application for Anganwadi workers, featuring BMI calculations, smart food suggestions, data visualization, and accessibility features.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
